@@ -46,3 +46,48 @@ int largest(node *l){
     return -1; 
 }
 
+/* b */
+int size(node *l){
+assert (l*=null)
+int amount = 0;
+ 
+while (l->next!=NULL) // to know the amount of number until reaching the NULL
+{
+l=l->next;
+amount++;
+  }
+  return amount;
+}
+
+
+
+
+/*   D   */
+void printout(node *l) {
+
+node *p = l->next;
+while (p!=NULL){
+printf("\%d, ",p->data);
+  p=p->next;
+}
+printf("\n");
+}
+
+
+
+/*  E  */
+
+int largest(node *l){
+  int x = l ->data;
+
+while (l!=NULL)
+{
+  if (l->data>x)
+  {
+   x = l-> data; 
+  }
+  l=l->next;
+  
+}
+return x; 
+}
