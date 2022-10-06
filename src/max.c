@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <assert.h>
 
-int max(int* numbers, int size)
-{
-    // Excercise 2
-    // Implement your code below...
+int max(int *numbers, int size) {
 
-    return -1;
+  int max_value = 0;
+
+  for (int j = 0; j < size; j++) {
+    if (*numbers < *(numbers + j)) {
+      max_value = *(numbers + j);
+    }
+  }
+  return max_value;
 }
+
