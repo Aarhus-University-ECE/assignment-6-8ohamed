@@ -48,7 +48,7 @@ int largest(node *l){
 
 /* b */
 int size(node *l){
-assert (l*=null)
+assert (l*=NULL)
 int amount = 0;
  
 while (l->next!=NULL) // to know the amount of number until reaching the NULL
