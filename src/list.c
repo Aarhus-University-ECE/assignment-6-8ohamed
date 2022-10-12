@@ -67,7 +67,7 @@ void printout(node *l) {
 
 node *p = l->next;
 while (p!=NULL){
-printf("\%d, ",p->data);
+printf("%d, ",p->data);
   p=p->next;
 }
 printf("\n");
