@@ -22,10 +22,15 @@ void add(node *head, int x){
 }
 
 int size(node *l){
-    // Excercise 3b)
-    // Add your code here... 
-
-    return -1;
+  assert(l!=NULL);
+    int amount = 0; 
+    // a Whileloop, to count the number of numbers until NULL is reached.
+    while (l->next!=NULL)
+    {
+      l = l->next;
+      amount = amount ++;
+    }
+    return amount;
 }
 
 void printout(node *l) {
@@ -35,6 +40,8 @@ void printout(node *l) {
     node *p = l->next;
     while (p!=NULL){
       printf("%d, ",p->data);
+      //to update the value of p, so we dont get stuck
+      p=p->next;
     }
     printf("\n");
 }
@@ -43,51 +50,15 @@ int largest(node *l){
     /*Excercise 3e) Add your code below.
       pre: head points to the first, empty element. The last element's next is NULL. size(l>0)
       post: returns the largest value of the list*/
-    return -1; 
-}
-
-/* b */
-int size(node *l){
-assert (l*=NULL)
-int amount = 0;
- 
-while (l->next!=NULL) // to know the amount of number until reaching the NULL
+     int x = l->data;
+//While loop, to count all until NULL, is detected.
+    while(l!=NULL)
 {
-l=l->next;
-amount++;
-  }
-  return amount;
+    if (l->data > x)
+    {
+        x = l->data;
+    }
+    l = l->next;
 }
-
-
-
-
-/*   D   */
-void printout(node *l) {
-
-node *p = l->next;
-while (p!=NULL){
-printf("%d, ",p->data);
-  p=p->next;
-}
-printf("\n");
-}
-
-
-
-/*  E  */
-
-int largest(node *l){
-  int x = l ->data;
-
-while (l!=NULL)
-{
-  if (l->data>x)
-  {
-   x = l-> data; 
-  }
-  l=l->next;
-  
-}
-return x; 
+    return x; 
 }
